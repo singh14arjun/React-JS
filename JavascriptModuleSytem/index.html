@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>javascriptmodule</title>
+
+  <script type="module">
+    import { message as message1 } from "./src/Home.js";
+    import { message as message2 } from "./src/Login.js";
+    import { message as message3 } from "./src/Index.js";
+    console.log(message1);
+    console.log(message2);
+    console.log(message3);
+    document.querySelector("h1").textContent = message1;
+    document.querySelector("h2").textContent = message2;
+    document.querySelector("h3").textContent = message3;
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <h1></h1>
+  <h2></h2>
+  <h3></h3>
+</body>
+
+</html>
