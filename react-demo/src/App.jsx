@@ -10,6 +10,7 @@ import BindingObject from './BindingObject'
 import DateTime from './DateAndTime'
 import RegularExp from './RegularExp'
 import Flipkart from './flipkart/Flipkart'
+import InoxMovies from './inox/InoxMovies'
 
 function App() {
 
@@ -22,7 +23,8 @@ function App() {
       {/* <BindingObject /> */}
       {/* <DateTime /> */}
       {/* <RegularExp /> */}
-      <Flipkart />
+      {/* <Flipkart /> */}
+      <InoxMovies />
     </div>
   )
 }

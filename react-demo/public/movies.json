@@ -1,0 +1,121 @@
+[
+    {
+        "name": "Kalki 2898 AD",
+        "image": "https://upload.wikimedia.org/wikipedia/en/4/4c/Kalki_2898_AD_poster.jpg",
+        "rating": 4.5,
+        "totalRatings": 1500,
+        "totalReviews": 210,
+        "price": 250,
+        "offers": [
+            "10% off on credit cards",
+            "Book 2 tickets get 1 free",
+            "30% off on snacks"
+        ]
+    },
+    {
+        "name": "RRR",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg",
+        "rating": 4.8,
+        "totalRatings": 5200,
+        "totalReviews": 850,
+        "price": 200,
+        "offers": [
+            "10% off on HDFC bank",
+            "5% cashback on UPI"
+        ]
+    },
+    {
+        "name": "KGF: Chapter 2",
+        "image": "https://upload.wikimedia.org/wikipedia/en/d/d0/K.G.F_Chapter_2.jpg",
+        "rating": 4.7,
+        "totalRatings": 4800,
+        "totalReviews": 650,
+        "price": 220,
+        "offers": [
+            "20% off for prime members"
+        ]
+    },
+    {
+        "name": "Jawan",
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/39/Jawan_film_poster.jpg",
+        "rating": 4.4,
+        "totalRatings": 3100,
+        "totalReviews": 450,
+        "price": 180,
+        "offers": [
+            "10% off",
+            "20% off",
+            "30% off"
+        ]
+    },
+    {
+        "name": "Pathaan",
+        "image": "https://upload.wikimedia.org/wikipedia/en/c/c3/Pathaan_film_poster.jpg",
+        "rating": 4.3,
+        "totalRatings": 2900,
+        "totalReviews": 400,
+        "price": 150,
+        "offers": [
+            "Buy 1 Get 1 Free on weekends"
+        ]
+    },
+    {
+        "name": "Baahubali 2: The Conclusion",
+        "image": "https://upload.wikimedia.org/wikipedia/en/9/93/Baahubali_2_The_Conclusion_poster.jpg",
+        "rating": 4.9,
+        "totalRatings": 8500,
+        "totalReviews": 1200,
+        "price": 300,
+        "offers": [
+            "10% off",
+            "Free popcorn on tickets above 500"
+        ]
+    },
+    {
+        "name": "Animal",
+        "image": "https://upload.wikimedia.org/wikipedia/en/9/90/Animal_%282023_film%29_poster.jpg",
+        "rating": 4.2,
+        "totalRatings": 2500,
+        "totalReviews": 300,
+        "price": 200,
+        "offers": [
+            "15% off on ICICI bank cards"
+        ]
+    },
+    {
+        "name": "Pushpa: The Rise",
+        "image": "https://upload.wikimedia.org/wikipedia/en/7/75/Pushpa_-_The_Rise_%282021_film%29.jpg",
+        "rating": 4.6,
+        "totalRatings": 3800,
+        "totalReviews": 500,
+        "price": 180,
+        "offers": [
+            "10% off",
+            "20% off",
+            "No Convenience Fee"
+        ]
+    },
+    {
+        "name": "Salaar",
+        "image": "https://upload.wikimedia.org/wikipedia/en/5/52/Salaar_Part_1_%E2%80%93_Ceasefire.jpg",
+        "rating": 4.5,
+        "totalRatings": 1900,
+        "totalReviews": 250,
+        "price": 210,
+        "offers": [
+            "10% off on credit cards",
+            "Flat 50 INR off"
+        ]
+    },
+    {
+        "name": "Leo",
+        "image": "https://upload.wikimedia.org/wikipedia/en/1/1d/Leo_%282023_Indian_film%29_poster.jpg",
+        "rating": 4.6,
+        "totalRatings": 2200,
+        "totalReviews": 320,
+        "price": 190,
+        "offers": [
+            "10% cashback via Paytm"
+        ]
+    }
+]
