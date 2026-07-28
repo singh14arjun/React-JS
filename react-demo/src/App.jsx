@@ -9,6 +9,7 @@ import Chart from './Chart'
 import BindingObject from './BindingObject'
 import DateTime from './DateAndTime'
 import RegularExp from './RegularExp'
+import Flipkart from './flipkart/Flipkart'
 
 function App() {
 
@@ -20,7 +21,8 @@ function App() {
       {/* <Chart /> */}
       {/* <BindingObject /> */}
       {/* <DateTime /> */}
-      <RegularExp />
+      {/* <RegularExp /> */}
+      <Flipkart />
     </div>
   )
 }

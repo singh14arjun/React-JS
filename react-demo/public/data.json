@@ -1,0 +1,59 @@
+[
+    {
+        "category": "mobile",
+        "name": "Samsung Galaxy S21",
+        "price": 79999,
+        "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/4/x/0/-original-imagtnqjjfgxzpz4.jpeg?q=70",
+        "rating": {
+            "rating": 4.5,
+            "totalRatings": 1000,
+            "totalReviews": 500
+        },
+        "description": "Samsung Galaxy S21 is a smartphone developed by Samsung Electronics. It was announced on January 14, 2021, and released on January 29, 2021.",
+        "storage": "128GB",
+        "color": "Phantom Black",
+        "offers": [
+            "10% off on HDFC Bank Credit Cards",
+            "5% off on Flipkart Axis Bank Credit Card",
+            "No Cost EMI"
+        ]
+    },
+    {
+        "category": "laptop",
+        "name": "Dell XPS 15",
+        "price": 149999,
+        "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/g/t/d/-original-imahg5fyqgdfhugy.jpeg?q=70",
+        "rating": {
+            "rating": 4.5,
+            "totalRatings": 1000,
+            "totalReviews": 500
+        },
+        "description": "Dell XPS 15 is a laptop developed by Dell Electronics. It was announced on January 14, 2021, and released on January 29, 2021.",
+        "storage": "128GB",
+        "color": "Phantom Black",
+        "offers": [
+            "10% off on HDFC Bank Credit Cards",
+            "5% off on Flipkart Axis Bank Credit Card",
+            "No Cost EMI"
+        ]
+    },
+    {
+        "category": "tv",
+        "name": "Samsung Galaxy TV",
+        "price": 79999,
+        "image": "https://rukminim2.flixcart.com/image/312/312/xif0q/television/r/3/y/sl328sg-skylive-original-imahkhtgcgrcghpz.jpeg?q=70",
+        "rating": {
+            "rating": 4.5,
+            "totalRatings": 1000,
+            "totalReviews": 500
+        },
+        "description": "Samsung Galaxy TV is a television developed by Samsung Electronics.",
+        "storage": "128GB",
+        "color": "Phantom Black",
+        "offers": [
+            "10% off on HDFC Bank Credit Cards",
+            "5% off on Flipkart Axis Bank Credit Card",
+            "No Cost EMI"
+        ]
+    }
+]
