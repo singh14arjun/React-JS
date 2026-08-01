@@ -11,12 +11,18 @@ import DateTime from './DateAndTime'
 import RegularExp from './RegularExp'
 import Flipkart from './flipkart/Flipkart'
 import InoxMovies from './inox/InoxMovies'
+import EventLoop from './ReactBinding/EventLoop'
+import EventBinding from './ReactBinding/Event-Binding'
+import TwoWayBinding from './ReactBinding/Two-Way-Binding'
+import MouseEvent from './mouseEvent/Mouse-Event'
+import MouseAnimation from './mouseEvent/mouse-animation'
+import KeyEvents from './mouseEvent/Key-Events'
 
 function App() {
 
   return (
     <div >
-      <h1>Hello World</h1>
+      {/* <h1>Hello World</h1> */}
       {/* <DataBinding /> */}
       {/* <Demo /> */}
       {/* <Chart /> */}
@@ -24,7 +30,13 @@ function App() {
       {/* <DateTime /> */}
       {/* <RegularExp /> */}
       {/* <Flipkart /> */}
-      <InoxMovies />
+      {/* <InoxMovies /> */}
+      {/* <EventLoop /> */}
+      {/* <EventBinding /> */}
+      {/* <TwoWayBinding /> */}
+      {/* <MouseEvent /> */}
+      {/* <MouseAnimation /> */}
+      <KeyEvents />
     </div>
   )
 }

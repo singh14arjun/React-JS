@@ -1,0 +1,13 @@
+.movie-container {
+    transition: all 0.5s ease-in-out;
+
+}
+
+.movie-container:hover {
+    border: 2px blue solid;
+}
+
+.movie-container:hover img {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
