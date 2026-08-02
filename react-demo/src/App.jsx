@@ -18,6 +18,8 @@ import MouseEvent from './mouseEvent/Mouse-Event'
 import MouseAnimation from './mouseEvent/mouse-animation'
 import KeyEvents from './mouseEvent/Key-Events'
 import ElementState from './ReactBinding/Element-State'
+import DebounceDemo from './Timer-event/DebounceDemo'
+import ThrottleDemo from './Timer-event/Throttle-Demo'
 
 function App() {
 
@@ -38,7 +40,9 @@ function App() {
       {/* <MouseEvent /> */}
       {/* <MouseAnimation /> */}
       {/* <KeyEvents /> */}
-      <ElementState />
+      {/* <ElementState /> */}
+      {/* <DebounceDemo /> */}
+      <ThrottleDemo />
     </div>
   )
 }
