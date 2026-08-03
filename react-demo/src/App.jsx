@@ -20,6 +20,7 @@ import KeyEvents from './mouseEvent/Key-Events'
 import ElementState from './ReactBinding/Element-State'
 import DebounceDemo from './Timer-event/DebounceDemo'
 import ThrottleDemo from './Timer-event/Throttle-Demo'
+import CarouselDemo from './carousel/Carousel-demp'
 
 function App() {
 
@@ -42,7 +43,8 @@ function App() {
       {/* <KeyEvents /> */}
       {/* <ElementState /> */}
       {/* <DebounceDemo /> */}
-      <ThrottleDemo />
+      {/* <ThrottleDemo /> */}
+      <CarouselDemo />
     </div>
   )
 }
