@@ -21,6 +21,7 @@ import ElementState from './ReactBinding/Element-State'
 import DebounceDemo from './Timer-event/DebounceDemo'
 import ThrottleDemo from './Timer-event/Throttle-Demo'
 import CarouselDemo from './carousel/Carousel-demp'
+import ConditonalRendering from './Conditional-rendering/Conditional-Rendering'
 
 function App() {
 
@@ -44,7 +45,8 @@ function App() {
       {/* <ElementState /> */}
       {/* <DebounceDemo /> */}
       {/* <ThrottleDemo /> */}
-      <CarouselDemo />
+      {/* <CarouselDemo /> */}
+      <ConditonalRendering />
     </div>
   )
 }
