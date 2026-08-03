@@ -22,6 +22,7 @@ import DebounceDemo from './Timer-event/DebounceDemo'
 import ThrottleDemo from './Timer-event/Throttle-Demo'
 import CarouselDemo from './carousel/Carousel-demp'
 import ConditonalRendering from './Conditional-rendering/Conditional-Rendering'
+import Home from './controlled-component/Home'
 
 function App() {
 
@@ -46,7 +47,8 @@ function App() {
       {/* <DebounceDemo /> */}
       {/* <ThrottleDemo /> */}
       {/* <CarouselDemo /> */}
-      <ConditonalRendering />
+      {/* <ConditonalRendering /> */}
+      <Home />
     </div>
   )
 }
