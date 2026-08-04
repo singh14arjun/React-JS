@@ -13,9 +13,9 @@ const ParentComponent = () => {
     return (
         <div className="bg-gray-300 p-4">
             <h1>Parent Component</h1>
-            {
-                msg
-            }
+            <p>
+                Message from child : {msg}
+            </p>
 
             <ChildComponent handleMsg={handleMsg} />
         </div>

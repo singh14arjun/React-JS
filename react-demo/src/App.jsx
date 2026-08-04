@@ -24,6 +24,8 @@ import CarouselDemo from './carousel/Carousel-demp'
 import ConditonalRendering from './Conditional-rendering/Conditional-Rendering'
 import Home from './controlled-component/Home'
 import { ContextDemo } from './contextDemo/context-dem-'
+import ReactForm from './react-form/React-form'
+import FormUseFormik from './react-form/FormUseFormik'
 
 function App() {
 
@@ -50,7 +52,9 @@ function App() {
       {/* <CarouselDemo /> */}
       {/* <ConditonalRendering /> */}
       {/* <Home /> */}
-      <ContextDemo />
+      {/* <ContextDemo /> */}
+      {/* <ReactForm /> */}
+      <FormUseFormik />
     </div>
   )
 }
