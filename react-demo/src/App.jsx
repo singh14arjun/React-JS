@@ -26,6 +26,8 @@ import Home from './controlled-component/Home'
 import { ContextDemo } from './contextDemo/context-dem-'
 import ReactForm from './react-form/React-form'
 import FormUseFormik from './react-form/FormUseFormik'
+import ReactFormDemo from './react-form/react-form-demo'
+import FakeStoreIndex from './fake-store/FakeStore-Index'
 
 function App() {
 
@@ -54,7 +56,9 @@ function App() {
       {/* <Home /> */}
       {/* <ContextDemo /> */}
       {/* <ReactForm /> */}
-      <FormUseFormik />
+      {/* <FormUseFormik /> */}
+      {/* <ReactFormDemo /> */}
+      <FakeStoreIndex />
     </div>
   )
 }
