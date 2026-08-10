@@ -28,11 +28,16 @@ import ReactForm from './react-form/React-form'
 import FormUseFormik from './react-form/FormUseFormik'
 import ReactFormDemo from './react-form/react-form-demo'
 import FakeStoreIndex from './fake-store/FakeStore-Index'
+import TodoHome from './todo-list/Todo-home'
+import TodoIndex from './todo-list/todo-index'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
 
   return (
     <div >
+      <ToastContainer />
       {/* <h1>Hello World</h1> */}
       {/* <DataBinding /> */}
       {/* <Demo /> */}
@@ -58,7 +63,9 @@ function App() {
       {/* <ReactForm /> */}
       {/* <FormUseFormik /> */}
       {/* <ReactFormDemo /> */}
-      <FakeStoreIndex />
+      {/* <FakeStoreIndex /> */}
+      {/* <TodoHome /> */}
+      <TodoIndex />
     </div>
   )
 }

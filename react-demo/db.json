@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "fullName": "Demo Data",
+      "email": "demo@gmail.com",
+      "password": "Demo123",
+      "id": "8CWPgf4obDo"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "1",
+      "userId": 1,
+      "title": "Task 1",
+      "description": "Task 1 Description",
+      "date": "2022-01-01",
+      "priority": "high",
+      "status": "completed"
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "title": "Task 2",
+      "description": "Task 2 Description",
+      "date": "2022-01-01",
+      "priority": "medium",
+      "status": "pending"
+    },
+    {
+      "id": "3",
+      "userId": 1,
+      "title": "Task 3",
+      "description": "Task 3 Description",
+      "date": "2022-01-01",
+      "priority": "low",
+      "status": "pending"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
