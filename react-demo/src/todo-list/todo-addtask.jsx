@@ -3,11 +3,15 @@ import { Formik, Form } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import * as Yup from "yup";
+import { useState } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const TodoAddTask = () => {
     const navigate = useNavigate();
 
     const [cookies] = useCookies(["user"]);
+    // const [appointments, setAppointments] = useState({});
 
     const userId = cookies?.user?.id;
 
@@ -48,11 +52,11 @@ const TodoAddTask = () => {
 
     const handleSubmit = async (values, { setSubmitting, resetForm }) => {
         try {
-
             if (!userId) {
-                console.error("User ID not found in cookie");
+                toast.error("User ID not found. Please login again.");
                 return;
             }
+
             const taskData = {
                 userId: userId,
                 title: values.title.trim(),
@@ -62,10 +66,27 @@ const TodoAddTask = () => {
             };
 
             console.log("Task Data:", taskData);
+
+            const response = await axios.post(
+                "http://localhost:3000/appointments",
+                taskData
+            );
+
+            console.log("Response:", response);
+
+            toast.success("Task created successfully");
+
             resetForm();
+
             navigate("/dashboard");
+
         } catch (error) {
             console.error("Failed to create task:", error);
+
+            toast.error(
+                error.response?.data?.message ||
+                "Failed to create task"
+            );
         } finally {
             setSubmitting(false);
         }

@@ -42,8 +42,8 @@ const TodoIndex = () => {
                         <Route path="dashboard" element={<TodoDashboard />} >
                             <Route index element={<TodoAllTask />} />
                             <Route path="add" element={<TodoAddTask />} />
-                            <Route path="edit" element={<TodoEdit />} />
-                            <Route path="delete" element={<TodoDelete />} />
+                            <Route path="edit/:id" element={<TodoEdit />} />
+                            <Route path="delete/:id" element={<TodoDelete />} />
                         </Route>
                         <Route path="*" element={<TodoNopage />} />
                     </Routes>

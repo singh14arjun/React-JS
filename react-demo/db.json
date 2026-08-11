@@ -34,6 +34,22 @@
       "date": "2022-01-01",
       "priority": "low",
       "status": "pending"
+    },
+    {
+      "userId": "8CWPgf4obDo",
+      "title": "Arjun",
+      "description": "Arjunsshjs",
+      "status": "ongoing",
+      "priority": "high",
+      "id": "uE1TV3M80Bs"
+    },
+    {
+      "userId": "8CWPgf4obDo",
+      "title": "Arjunsbsjhs",
+      "description": "ssssssssssssss",
+      "status": "pending",
+      "priority": "high",
+      "id": "h2Vg31IzuOE"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

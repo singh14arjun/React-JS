@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import { Outlet, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { MdAdd, MdLogout } from "react-icons/md";
+import { MdAdd, MdDelete, MdEdit, MdLogout, MdPassword } from "react-icons/md";
 
 const TodoAllTask = () => {
     const [appiontments, setAppiontments] = useState([]);
@@ -20,10 +20,13 @@ const TodoAllTask = () => {
             return;
         }
 
-        axios.get(`http://localhost:3000/appointments/${user.id}`)
+        axios.get(`http://localhost:3000/appointments`)
             .then((res) => {
-                console.log(res.data);
-                setAppiontments(res.data);
+                const filteredAppointments = res.data.filter(
+                    (appointment) => appointment.userId === user.id
+                );
+                console.log(filteredAppointments);
+                setAppiontments(filteredAppointments);
             })
             .catch((err) => {
                 console.log(err);
@@ -38,6 +41,25 @@ const TodoAllTask = () => {
         removeCookie("user");
         setUser(null);
         navigate("/login");
+    }
+
+    function handleEdit(id) {
+        navigate(`edit/${id}`);
+    }
+
+    function handleDelete(id) {
+        axios.delete(`http://localhost:3000/appointments/${id}`)
+            .then((res) => {
+                console.log(res);
+                loadAppiontments();
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }
+
+    function handleView(id) {
+        navigate(`/view-task/${id}`);
     }
 
     return (
@@ -162,6 +184,75 @@ const TodoAllTask = () => {
                         Manage your tasks and stay organized.
                     </p>
 
+                    <div className="mt-6">
+                        <div className="overflow-x-auto">
+                            <table className="w-full">
+                                <thead>
+                                    <tr className="border-b border-gray-200">
+                                        <th className="px-4 py-2">Title</th>
+                                        <th className="px-4 py-2">Description</th>
+                                        <th className="px-4 py-2">Status</th>
+                                        <th className="px-4 py-2">Priority</th>
+                                        <th className="px-4 py-2">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {appiontments.map((appointment) => (
+                                        <tr key={appointment.id} className="border-x-2 border-b border-gray-200 rounded-lg border-gray-700">
+                                            <td className="px-4 py-2">{appointment.title}</td>
+                                            <td className="px-4 py-2">{appointment.description}</td>
+                                            <td className="px-4 py-2">{appointment.status.toUpperCase()}</td>
+                                            <td className="px-4 py-2">{appointment.priority.toUpperCase()}</td>
+                                            <td className="px-4 py-2">
+                                                <button
+                                                    type="button"
+                                                    className="px-4 py-2
+                                                       bg-blue-500
+                                                       hover:bg-blue-600
+                                                       text-white
+                                                       font-semibold
+                                                       rounded-lg
+                                                       transition
+                                                       cursor-pointer"
+                                                    onClick={() => handleEdit(appointment.id)}
+                                                >
+                                                    <MdEdit />
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    className="px-4 py-2
+                                                       bg-red-500
+                                                       hover:bg-red-600
+                                                       text-white
+                                                       font-semibold
+                                                       rounded-lg
+                                                       transition
+                                                       cursor-pointer"
+                                                    onClick={() => handleDelete(appointment.id)}
+                                                >
+                                                    <MdDelete />
+                                                </button>
+                                                <button
+                                                    type="button"
+                                                    className="px-4 py-2
+                                                       bg-green-500
+                                                       hover:bg-green-600
+                                                       text-white
+                                                       font-semibold
+                                                       rounded-lg
+                                                       transition
+                                                       cursor-pointer"
+                                                    onClick={() => handleView(appointment.id)}
+                                                >
+                                                    <MdPassword />
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
                 </div>
 
