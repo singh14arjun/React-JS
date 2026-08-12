@@ -1,4 +1,4 @@
-const TodoNodata = () => {
+export default function TodoNodata() {
     return (
         <div>
             <h1 className="text-2xl font-bold">
@@ -7,5 +7,3 @@ const TodoNodata = () => {
         </div>
     );
 };
-
-export default TodoNodata;

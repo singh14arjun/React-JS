@@ -3,15 +3,13 @@ import { Formik, Form } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import * as Yup from "yup";
-import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const TodoAddTask = () => {
+export default function TodoAddTask() {
     const navigate = useNavigate();
 
     const [cookies] = useCookies(["user"]);
-    // const [appointments, setAppointments] = useState({});
 
     const userId = cookies?.user?.id;
 
@@ -347,4 +345,3 @@ const TodoAddTask = () => {
     );
 };
 
-export default TodoAddTask;

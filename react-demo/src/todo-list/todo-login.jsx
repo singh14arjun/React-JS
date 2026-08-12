@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 
-const TodoLogin = () => {
+export default function TodoLogin() {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
     const [cookies, setCookie, removeCookie] = useCookies(["user"]);
@@ -213,4 +213,3 @@ const TodoLogin = () => {
     );
 };
 
-export default TodoLogin;

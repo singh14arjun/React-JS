@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const TodoNopage = () => {
+export default function TodoNopage() {
     return (
         <div className="bg-red-300 h-screen flex items-center justify-center relative">
 
@@ -16,4 +16,3 @@ const TodoNopage = () => {
     );
 };
 
-export default TodoNopage;

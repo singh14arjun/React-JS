@@ -5,7 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const TodoRegister = () => {
+export default function TodoRegister() {
 
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
@@ -226,4 +226,3 @@ const TodoRegister = () => {
     );
 };
 
-export default TodoRegister;

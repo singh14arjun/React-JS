@@ -4,7 +4,7 @@ import { Outlet, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { MdAdd, MdDelete, MdEdit, MdLogout, MdOutlineRemoveRedEye, MdPassword } from "react-icons/md";
 
-const TodoAllTask = () => {
+export default function TodoAllTask() {
     const [appiontments, setAppiontments] = useState([]);
     const [search, setSearch] = useState("");
     const [status, setStatus] = useState("");
@@ -258,4 +258,3 @@ const TodoAllTask = () => {
     );
 };
 
-export default TodoAllTask;

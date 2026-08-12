@@ -3,7 +3,7 @@ import { useEffect, useState, useTransition } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const TodoDelete = () => {
+export default function TodoDelete() {
     const { id } = useParams();
     const navigate = useNavigate();
     const [appointment, setAppointment] = useState(null);
@@ -66,4 +66,3 @@ const TodoDelete = () => {
     );
 };
 
-export default TodoDelete;

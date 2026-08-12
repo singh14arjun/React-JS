@@ -5,7 +5,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 
-const TodoDashboard = () => {
+export default function TodoDashboard() {
 
     const [appiontments, setAppiontments] = useState([]);
     const [search, setSearch] = useState("");
@@ -110,4 +110,3 @@ const TodoDashboard = () => {
     );
 };
 
-export default TodoDashboard;

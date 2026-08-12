@@ -5,7 +5,7 @@ import { useEffect, useState, useTransition } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const TodoEdit = () => {
+export default function TodoEdit() {
     const [task, setTask] = useState(null);
 
     const { id } = useParams();
@@ -320,4 +320,3 @@ const TodoEdit = () => {
     );
 };
 
-export default TodoEdit;

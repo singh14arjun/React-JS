@@ -1,15 +1,16 @@
 import { CiEdit } from "react-icons/ci";
 import { BrowserRouter, Link, Route, Routes, useNavigate } from "react-router-dom";
-import TodoHome from "./Todo-home";
-import TodoLogin from "./todo-login";
-import TodoRegister from "./todo-register";
-import TodoDashboard from "./todo-dashboard";
-import TodoNopage from "./todo-nopage";
-import TodoAddTask from "./todo-addtask";
-import TodoEdit from "./todo-edit";
-import TodoDelete from "./todo-delete";
-import TodoAllTask from "./todo-allTask";
-import TodoProfile from "./todo-profile";
+const TodoHome = lazy(() => import("./Todo-home"));
+const TodoLogin = lazy(() => import("./todo-login"));
+const TodoRegister = lazy(() => import("./todo-register"));
+const TodoDashboard = lazy(() => import("./todo-dashboard"));
+const TodoNopage = lazy(() => import("./todo-nopage"));
+const TodoAddTask = lazy(() => import("./todo-addtask"));
+const TodoEdit = lazy(() => import("./todo-edit"));
+const TodoDelete = lazy(() => import("./todo-delete"));
+const TodoAllTask = lazy(() => import("./todo-allTask"));
+const TodoProfile = lazy(() => import("./todo-profile"));
+import { lazy, Suspense } from "react";
 
 
 const TodoIndex = () => {
@@ -36,19 +37,27 @@ const TodoIndex = () => {
                     </div>
                 </header>
                 <section>
-                    <Routes>
-                        <Route path="/" element={<TodoHome />} />
-                        <Route path="login" element={<TodoLogin />} />
-                        <Route path="register" element={<TodoRegister />} />
-                        <Route path="dashboard" element={<TodoDashboard />} >
-                            <Route index element={<TodoAllTask />} />
-                            <Route path="add" element={<TodoAddTask />} />
-                            <Route path="edit/:id" element={<TodoEdit />} />
-                            <Route path="delete/:id" element={<TodoDelete />} />
-                            <Route path="profile" element={<TodoProfile />} />
-                        </Route>
-                        <Route path="*" element={<TodoNopage />} />
-                    </Routes>
+                    <Suspense
+                        fallback=
+                        {
+                            <div className="flex items-center justify-center h-screen">
+                                <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+                            </div>
+                        }>
+                        <Routes>
+                            <Route path="/" element={<TodoHome />} />
+                            <Route path="login" element={<TodoLogin />} />
+                            <Route path="register" element={<TodoRegister />} />
+                            <Route path="dashboard" element={<TodoDashboard />} >
+                                <Route index element={<TodoAllTask />} />
+                                <Route path="add" element={<TodoAddTask />} />
+                                <Route path="edit/:id" element={<TodoEdit />} />
+                                <Route path="delete/:id" element={<TodoDelete />} />
+                                <Route path="profile" element={<TodoProfile />} />
+                            </Route>
+                            <Route path="*" element={<TodoNopage />} />
+                        </Routes>
+                    </Suspense>
                 </section>
             </BrowserRouter>
         </div>
