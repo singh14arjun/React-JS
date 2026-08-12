@@ -32,6 +32,8 @@ import TodoHome from './todo-list/Todo-home'
 import TodoIndex from './todo-list/todo-index'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import UseEffectDemo from './hooks/use-effect/use-effecDemo'
+import UseStateDemo from './hooks/use-state/use-StateDemo'
 
 function App() {
 
@@ -65,7 +67,9 @@ function App() {
       {/* <ReactFormDemo /> */}
       {/* <FakeStoreIndex /> */}
       {/* <TodoHome /> */}
-      <TodoIndex />
+      {/* <TodoIndex /> */}
+      {/* <UseEffectDemo /> */}
+      <UseStateDemo />
     </div>
   )
 }

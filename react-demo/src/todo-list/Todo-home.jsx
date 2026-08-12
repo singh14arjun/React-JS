@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { TodoLogin } from "./todo-login";
-import { TodoRegister } from "./todo-register";
+import TodoLogin from "./todo-login";
+import TodoRegister from "./todo-register";
 
 export default function TodoHome() {
     const [toggle, setToggle] = useState(true);

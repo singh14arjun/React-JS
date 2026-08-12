@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useCookies } from "react-cookie";
 import { Outlet, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { MdAdd, MdDelete, MdEdit, MdLogout, MdOutlineRemoveRedEye, MdPassword } from "react-icons/md";
+import { MdAdd, MdDelete, MdEdit, MdLogout, MdOutlineRemoveRedEye } from "react-icons/md";
 
 export default function TodoAllTask() {
     const [appiontments, setAppiontments] = useState([]);
@@ -13,7 +13,7 @@ export default function TodoAllTask() {
     const [user, setUser] = useState(cookies.user);
     const navigate = useNavigate();
 
-    function loadAppiontments() {
+    const loadAppiontments = useMemo(() => {
 
         if (!user) {
             navigate("/login");
@@ -31,11 +31,11 @@ export default function TodoAllTask() {
             .catch((err) => {
                 console.log(err);
             })
-    }
+    }, [appiontments]);
 
-    useEffect(() => {
-        loadAppiontments();
-    }, []);
+    // useEffect(() => {
+    //     loadAppiontments();
+    // }, []);
 
     function handleLogout() {
         removeCookie("user");
