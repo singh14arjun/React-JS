@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import { Outlet, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { MdAdd, MdDelete, MdEdit, MdLogout, MdPassword } from "react-icons/md";
+import { MdAdd, MdDelete, MdEdit, MdLogout, MdOutlineRemoveRedEye, MdPassword } from "react-icons/md";
 
 const TodoAllTask = () => {
     const [appiontments, setAppiontments] = useState([]);
@@ -48,14 +48,7 @@ const TodoAllTask = () => {
     }
 
     function handleDelete(id) {
-        axios.delete(`http://localhost:3000/appointments/${id}`)
-            .then((res) => {
-                console.log(res);
-                loadAppiontments();
-            })
-            .catch((err) => {
-                console.log(err);
-            })
+        navigate(`delete/${id}`);
     }
 
     function handleView(id) {
@@ -199,11 +192,15 @@ const TodoAllTask = () => {
                                 <tbody>
                                     {appiontments.map((appointment) => (
                                         <tr key={appointment.id} className="border-x-2 border-b border-gray-200 rounded-lg border-gray-700">
-                                            <td className="px-4 py-2">{appointment.title}</td>
-                                            <td className="px-4 py-2">{appointment.description}</td>
-                                            <td className="px-4 py-2">{appointment.status.toUpperCase()}</td>
-                                            <td className="px-4 py-2">{appointment.priority.toUpperCase()}</td>
-                                            <td className="px-4 py-2">
+                                            <td className=" py-2 text-center">{appointment.title}</td>
+                                            <td className="px-4 py-2 text-center">{appointment.description}</td>
+                                            <td
+                                                className={`px-4 py-2 text-center 
+                                                ${appointment.status === "completed" ? "font-bold bg-green-200" : appointment.status === "ongoing" ? "font-bold bg-yellow-200" : "font-bold bg-red-200"}`}>{appointment.status.toUpperCase()}</td>
+                                            <td
+                                                className={`px-4 py-2 text-center 
+                                                ${appointment.priority === "high" ? "font-bold text-red-500" : appointment.priority === "medium" ? "font-bold text-yellow-500" : "font-bold text-green-500"}`}>{appointment.priority.toUpperCase()}</td>
+                                            <td className="py-2 flex justify-center items-center gap-2">
                                                 <button
                                                     type="button"
                                                     className="px-4 py-2
@@ -244,7 +241,7 @@ const TodoAllTask = () => {
                                                        cursor-pointer"
                                                     onClick={() => handleView(appointment.id)}
                                                 >
-                                                    <MdPassword />
+                                                    <MdOutlineRemoveRedEye />
                                                 </button>
                                             </td>
                                         </tr>

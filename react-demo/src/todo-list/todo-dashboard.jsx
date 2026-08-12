@@ -15,26 +15,6 @@ const TodoDashboard = () => {
     const [user, setUser] = useState(cookies.user);
     const navigate = useNavigate();
 
-    function loadAppiontments() {
-
-        if (!user) {
-            navigate("/login");
-            return;
-        }
-
-        axios.get(`http://localhost:3000/appointments/${user.id}`)
-            .then((res) => {
-                console.log(res.data);
-                setAppiontments(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
-    }
-
-    useEffect(() => {
-        loadAppiontments();
-    }, []);
 
     function handleLogout() {
         removeCookie("user");
@@ -80,7 +60,7 @@ const TodoDashboard = () => {
 
                 <div className="flex min-h-screen">
 
-                    <aside className="w-64 bg-gray-100 border-r  p-4">
+                    <aside className="w-64 bg-gray-100 border-r  p-4 h-screen fixed">
 
                         <div className="mb-8">
                             <h1 className="text-2xl font-bold text-gray-800">
@@ -114,7 +94,7 @@ const TodoDashboard = () => {
                     </aside>
 
 
-                    <main className="flex-1">
+                    <main className="flex-1 ml-64">
 
                         <Outlet />
 

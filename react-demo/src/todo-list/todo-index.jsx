@@ -9,6 +9,7 @@ import TodoAddTask from "./todo-addtask";
 import TodoEdit from "./todo-edit";
 import TodoDelete from "./todo-delete";
 import TodoAllTask from "./todo-allTask";
+import TodoProfile from "./todo-profile";
 
 
 const TodoIndex = () => {
@@ -44,6 +45,7 @@ const TodoIndex = () => {
                             <Route path="add" element={<TodoAddTask />} />
                             <Route path="edit/:id" element={<TodoEdit />} />
                             <Route path="delete/:id" element={<TodoDelete />} />
+                            <Route path="profile" element={<TodoProfile />} />
                         </Route>
                         <Route path="*" element={<TodoNopage />} />
                     </Routes>
